@@ -1,0 +1,39 @@
+<!-- Top Navbar-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <% back_path = back_path(@path) %>
+    <% if back_path %>
+      <div class="left">
+        <a href="<%= url_for_path(back_path) %>" class="back link" data-forceUrl="true">
+          <i class="icon icon-back"></i>
+          <span><%= File.basename(back_path) %></span>
+        </a>
+      </div>
+    <% end %>
+    <div class="center sliding"><%= @name == "/" ? "Beamer Remote" : @name %></div>
+  </div>
+</div>
+<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+<div class="pages navbar-through">
+  <!-- Page, data-page contains page name-->
+  <div data-page="browse" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="list-block">
+        <ul>
+          <% @entries.each do |entry| %>
+            <li>
+              <a href="<%= url_for_path(File.join(@path, entry)) %>" class="item-link">
+                <div class="item-content">
+                  <div class="item-inner">
+                    <div class="item-title"><%= entry %></div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

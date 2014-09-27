@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+$:.push File.expand_path("../../lib", __FILE__)
+require "beamer-remote"
+require "beamer-remote/server"
+require "vegas"
+
+options = {
+  skip_launch: true
+}
+
+Vegas::Runner.new(BeamerRemote::Server, "beamer-remote", options)
