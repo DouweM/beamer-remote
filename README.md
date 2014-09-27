@@ -26,16 +26,18 @@ gem install beamer-remote
 ### On your iPhone
 
 - Make sure your iPhone is connected to the same network as your Mac (and Apple TV).
-
 - Navigate to `[ip address]:[port]` in Safari: `192.168.178.13:5678`.
-
 - See all of your media in the palm of your hand.
-
 - Rejoice, for you never need to get off the couch again.
-
 - Add the web app to your Home Screen for the smoothest experience.
 
-**Tip:** If you store all of your media in one directory, say `/Volumes/Media HD/Movies`, save yourself time by browsing to that specific location and bookmarking _that_: `http://192.168.178.13:5678/browse/Volumes/Media%20HD/Movies`
+**Tip** for Mac: If you want the `beamer-remote` server to start automatically every time you boot your Mac (as you should), do as follows:
+- Find the location where `beamer-remote` is installed by running `which beamer-remote`.
+- Go to System Preferences > Users & Groups > Login Items and choose the add (`+`) button.
+- Navigate to `beamer-remote` at the location you just found and choose "Add".
+- There is no step 4.
+
+**Tip** for iPhone: If you store all of your media in one directory, say `/Volumes/Media HD/Movies`, save yourself time by browsing to that specific location on your iPhone and bookmarking _that_: `http://192.168.178.13:5678/browse/Volumes/Media%20HD/Movies`.
 
 ## License
 Copyright (c) 2014 Douwe Maan
